@@ -21,8 +21,8 @@ class Poligono:
         for i in range(n):
             x1 = self.pontos[(i+1)%n].x
             y1 = self.pontos[(i+1)%n].y
-            x0 = self.pontos[i].x
-            y0 = self.pontos[i].y
+            x0 = self.pontos[i%n].x
+            y0 = self.pontos[i%n].y
             total += math.sqrt((x1-x0)**2 + (y1-y0)**2)
         return total
 
